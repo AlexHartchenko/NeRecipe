@@ -25,7 +25,9 @@ class RecipeViewModel(application: Application) : AndroidViewModel(application),
     val filterFragment = Event<Unit>()
     val updateRecipe = MutableLiveData<Recipe>(null)
     val singleRecipe = MutableLiveData<Recipe?>(null)
+    val feedFragment = data
     private val currentRecipe = MutableLiveData<Recipe?>(null)
+
 
 
     fun clearFilter() {

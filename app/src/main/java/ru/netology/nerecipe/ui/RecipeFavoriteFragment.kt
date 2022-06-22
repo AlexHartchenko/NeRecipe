@@ -56,6 +56,13 @@ class RecipeFavoriteFragment : Fragment() {
                     viewModel.filterFragment.call()
                     true
                 }
+                R.id.feed -> {
+                    viewModel.feedFragment.observe(viewLifecycleOwner) {
+                        val directions = RecipeFavoriteFragmentDirections.actionFavoriteFragmentToFeedFragment()
+                        findNavController().navigate(directions)
+                    }
+                    true
+                }
                 else -> false
             }
         }
@@ -64,19 +71,9 @@ class RecipeFavoriteFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        viewModel.favoriteFragment.observe(this) {
-            val direction = FeedRecipeFragmentDirections.favoriteFragment()
-            findNavController().navigate(direction)
-        }
-
         viewModel.updateRecipeFragment.observe(this) {
             val updatedRecipe = viewModel.updateRecipe.value
             val directions = FeedRecipeFragmentDirections.updateRecipeFragment(updatedRecipe)
-            findNavController().navigate(directions)
-        }
-
-        viewModel.createFragment.observe(this) {
-            val directions = FeedRecipeFragmentDirections.recipeCreateFragment()
             findNavController().navigate(directions)
         }
 

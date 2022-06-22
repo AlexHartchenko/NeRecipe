@@ -32,8 +32,8 @@
         android:name="ru.netology.nerecipe.ui.RecipeFavoriteFragment">
 
         <action
-            android:id="@+id/action_favoriteFragment_to_recipeViewFragment"
-            app:destination="@id/recipeViewFragment" />
+            android:id="@+id/action_favoriteFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
     </fragment>
 
     <fragment
