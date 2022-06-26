@@ -79,12 +79,6 @@
             android:text="@string/european_type" />
 
         <RadioButton
-            android:id="@+id/checkBoxRussian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/russian_type" />
-
-        <RadioButton
             android:id="@+id/checkBoxAsian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -107,7 +101,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/american_type" />
-
+        <RadioButton
+            android:id="@+id/checkBoxRussian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/russian_type" />
 
         <RadioButton
             android:id="@+id/checkBoxMediterranean"
